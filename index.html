@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokemon Card Search</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Pokemon Card Search</h1>
+    <form id="search-form">
+      <input
+        type="text"
+        id="pokemon-input"
+        placeholder="Enter a Pokemon name (e.g. pikachu)"
+        autocomplete="off"
+        required
+      />
+      <button type="submit">Search</button>
+    </form>
+    <div class="quick-search">
+      <button type="button" class="quick-btn" data-name="pikachu">Pikachu</button>
+      <button type="button" class="quick-btn" data-name="charizard">Charizard</button>
+      <button type="button" class="quick-btn" data-name="bulbasaur">Bulbasaur</button>
+    </div>
+    <div id="status" class="status" aria-live="polite"></div>
+    <section id="card-container" class="card-container"></section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

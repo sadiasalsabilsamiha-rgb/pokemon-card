@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f2f2f7;
+  margin: 0;
+  padding: 24px 12px;
+  color: #222;
+}
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+#search-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+#pokemon-input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+#search-form button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #2f6fed;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+#search-form button:hover {
+  background: #1d54c4;
+}
+.quick-search {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.quick-btn {
+  padding: 6px 14px;
+  border: 1px solid #2f6fed;
+  border-radius: 999px;
+  background: #fff;
+  color: #2f6fed;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.quick-btn:hover {
+  background: #2f6fed;
+  color: #fff;
+}
+.status {
+  text-align: center;
+  min-height: 24px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.status.loading {
+  color: #555;
+}
+.status.error {
+  color: #c0392b;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+.poke-card {
+  width: 100%;
+  border-radius: 16px;
+  padding: 20px;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  /* default background if no type class matches yet */
+  background: linear-gradient(160deg, #888, #555);
+}
+.poke-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.poke-card__name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.poke-card__id {
+  font-size: 1rem;
+  opacity: 0.85;
+}
+.poke-card__image {
+  display: block;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  image-rendering: pixelated;
+}
+.poke-card__types {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin: 8px 0 12px;
+}
+.type-badge {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.25);
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+.poke-card__meta {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+}
+.poke-card__stats {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  text-transform: capitalize;
+}
+.poke-card__abilities {
+  font-size: 0.9rem;
+  text-align: center;
+}
+.poke-card__abilities span {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin: 2px;
+  text-transform: capitalize;
+}
+.type-fire { background: linear-gradient(160deg, #f7a072, #d84c1e); }
+.type-water { background: linear-gradient(160deg, #6ec6ff, #1565c0); }
+.type-grass { background: linear-gradient(160deg, #8bd17c, #2e7d32); }
+.type-electric { background: linear-gradient(160deg, #fff176, #f9a825); color: #333; }
+.type-psychic { background: linear-gradient(160deg, #f48fb1, #ad1457); }
+.type-ice { background: linear-gradient(160deg, #b3e5fc, #0288d1); }
+.type-dragon { background: linear-gradient(160deg, #9575cd, #4527a0); }
+.type-dark { background: linear-gradient(160deg, #616161, #212121); }
+.type-fairy { background: linear-gradient(160deg, #f8bbd0, #c2185b); }
+.type-normal { background: linear-gradient(160deg, #cfcfc4, #8d8d74); color: #333; }
+.type-fighting { background: linear-gradient(160deg, #e57373, #b71c1c); }
+.type-flying { background: linear-gradient(160deg, #b39ddb, #5e35b1); }
+.type-poison { background: linear-gradient(160deg, #ba68c8, #6a1b9a); }
+.type-ground { background: linear-gradient(160deg, #d7b98c, #8d6e63); }
+.type-rock { background: linear-gradient(160deg, #bcaaa4, #6d4c41); }
+.type-bug { background: linear-gradient(160deg, #aed581, #558b2f); color: #333; }
+.type-ghost { background: linear-gradient(160deg, #7986cb, #311b92); }
+.type-steel { background: linear-gradient(160deg, #b0bec5, #455a64); }
+@media (max-width: 400px) {
+  #search-form {
+    flex-direction: column;
+  }
+  .poke-card__meta {
+    gap: 12px;
+  }
+}
